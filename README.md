@@ -5,7 +5,7 @@
 
 Sponsored by **Xcel Energy** and **Ball Aerospace**  
 
-![Final Presentation](./assets/FSI_Scholarly_Research_Poster.pdf)
+![Final Presentation](./assets/NTScholarlyResearchPosterPreview.png)
 
 ## Overview
 
