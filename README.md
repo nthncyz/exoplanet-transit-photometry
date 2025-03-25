@@ -70,9 +70,7 @@ Special thanks to **Xcel Energy** and **Ball Aerospace** for their sponsorship a
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+### It is not available for reuse or reproduction; only for my demonstrative purposes of the work I've done and completed.
 
 ---
 
