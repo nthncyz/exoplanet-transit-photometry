@@ -5,7 +5,7 @@
 
 Sponsored by **Xcel Energy** and **Ball Aerospace**  
 
-![Final Presentation](./assets/PDF_preview_photometrica.png)
+![Final Presentation](./assets/FSI_Scholarly_Research_Poster.pdf)
 
 ## Overview
 
