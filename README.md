@@ -4,11 +4,12 @@
 </div>
 
 Sponsored by **Xcel Energy** and **Ball Aerospace**  
-![Final Presentation](./photometrica.png)
+
+![Final Presentation](./assets/PDF_preview_photometrica.png)
 
 ## Overview
 
-This repository demonstrates a streamlined approach to exoplanet photometry, merging object‑oriented Python programming with advanced astronomical analysis. The study focuses on CoRoT‑2b’s transit, revealing key insights through precise measurements of stellar brightness.
+This repository demonstrates a streamlined approach to exoplanet photometry, merging object‑oriented C++/Java/Python programming with advanced astronomical analysis. The study focuses on CoRoT‑2b’s transit, revealing key insights through precise measurements of stellar brightness.
 
 ## Table of Contents
 - [Overview](#overview)
