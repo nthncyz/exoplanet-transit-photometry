@@ -3,59 +3,50 @@ import os
 import shutil
 import sys
 
-# Clean any previous build artifacts
 if os.path.exists('dist'):
     shutil.rmtree('dist')
 if os.path.exists('build'):
     shutil.rmtree('build')
 
-# Define the PyInstaller command
 pyinstaller_args = [
-    '../src/simulator/exoplanet_transit_simulator.py',  # Main script (updated path for your structure)
-    '--name=ExoplanetTransitSimulator',  # Name of the output
-    '--onefile',  # Create a single executable file
-    '--windowed',  # Don't show console window (for Windows)
-    '--icon=icon.ico',  # Application icon
-    '--add-data=../README.md:.',  # Include README
-    '--hidden-import=numpy',  # Ensure NumPy is included
-    '--hidden-import=matplotlib',  # Ensure Matplotlib is included
-    '--hidden-import=matplotlib.backends.backend_tkagg',  # Required for Matplotlib GUI
-    '--clean',  # Clean PyInstaller cache
-    '--noconfirm',  # Don't ask for confirmation
+    'exoplanet_transit_simulator.py',
+    '--name=ExoplanetTransitSimulator',
+    '--onefile',
+    '--windowed',
+    '--icon=icon.ico',
+    '--add-data=README.md:.',
+    '--hidden-import=numpy',
+    '--hidden-import=matplotlib',
+    '--hidden-import=matplotlib.backends.backend_tkagg',
+    '--clean',
+    '--noconfirm',
 ]
 
-# Run PyInstaller
 PyInstaller.__main__.run(pyinstaller_args)
 
 print("PyInstaller build completed!")
 
-# Create icon file if it doesn't exist (simple placeholder)
 if not os.path.exists('icon.ico'):
     try:
         import matplotlib.pyplot as plt
         import numpy as np
         from matplotlib.patches import Circle
         
-        # Create a simple icon
         fig, ax = plt.subplots(figsize=(5, 5))
         ax.set_aspect('equal')
         ax.set_xlim(-1.2, 1.2)
         ax.set_ylim(-1.2, 1.2)
         ax.axis('off')
         
-        # Draw star
         star = Circle((0, 0), 0.5, color='orange')
         ax.add_patch(star)
         
-        # Draw planet
         planet = Circle((0.8, 0), 0.2, color='blue')
         ax.add_patch(planet)
         
-        # Save as PNG first
         plt.savefig('icon.png', dpi=100, bbox_inches='tight', transparent=True)
         plt.close()
         
-        # Convert PNG to ICO using PIL
         from PIL import Image
         img = Image.open('icon.png')
         img.save('icon.ico')
@@ -63,11 +54,9 @@ if not os.path.exists('icon.ico'):
         print("Created icon.ico")
     except Exception as e:
         print(f"Could not create icon: {e}")
-        # Create an empty file as placeholder
         with open('icon.ico', 'wb') as f:
             f.write(b'')
 
-# For Windows, create an Inno Setup script
 if sys.platform.startswith('win'):
     inno_script = """
 [Setup]
